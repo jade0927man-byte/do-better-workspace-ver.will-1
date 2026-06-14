@@ -1,0 +1,89 @@
+# CLAUDE.md
+
+## 워크스페이스 목적
+
+{{워크스페이스 용도를 한 문장으로}}
+
+## 폴더 구조 (Johnny Decimal)
+
+```
+00-inbox/       - 빠른 캡처 (임시 보관)
+00-system/      - 시스템 설정, 템플릿, 가이드
+10-projects/    - 활성 프로젝트 (시한부)
+20-operations/  - 지속적 운영 업무
+30-knowledge/   - 지식 아카이브
+40-personal/    - Daily Note, Todos
+50-resources/   - 참고 자료
+90-archive/     - 완료된 프로젝트
+```
+
+## 주요 커맨드
+
+| 커맨드 | 용도 |
+|--------|------|
+| `/daily-note` | 오늘 Daily Note 생성/열기 |
+| `/progress` | 영역별 진척 스냅샷에 한 줄 기록 |
+| `/create-command` | 새 슬래시 커맨드 생성 마법사 |
+| `/thinking-partner` | 생각 정리 파트너 |
+| `/todos` | 할 일 모아보기 (읽기전용) |
+| `/setup-workspace` | 초기 설정 마법사 (CLAUDE.md 자동 생성) |
+
+## 주요 스킬 (자동 트리거)
+
+| 스킬 | 트리거 |
+|------|--------|
+| `transcript-organizer` | "녹음 정리", "강의 정리" |
+| `notion-handler` | "노션", "DB 만들어" |
+| `web-crawler-ocr` | URL 제공 시, "크롤링" |
+| `web-bypass` | 차단/403 URL 우회 추출 |
+| `excel-to-csv` | 엑셀 파일 분석 시 |
+| `dashboard-prd` | "대시보드 PRD", "대시보드 기획" |
+| `webapp-prd` | "웹앱 PRD", "웹앱 기획" |
+| `youtube-to-notion` | YouTube URL 분석·저장 |
+
+> 서브에이전트: `research-agent` (정보 수집·리서치 위임)
+
+## 주요 가이드 (자동 참조)
+
+해당 작업 시작 전 가이드를 먼저 읽고 원칙을 적용하세요.
+
+| 가이드 | 자동 참조 트리거 |
+|--------|-----------------|
+| `30-knowledge/31-claude-code/skills-guide.md` | 스킬 생성·수정 시 |
+| `30-knowledge/31-claude-code/subagents-guide.md` | 서브에이전트 생성·수정 시 |
+| `30-knowledge/31-claude-code/prompt-engineering-guide.md` | 스킬/커맨드/에이전트 생성·개선 시 |
+| `30-knowledge/31-claude-code/claude-md-guide.md` | CLAUDE.md 수정 시 |
+| `30-knowledge/31-claude-code/settings-guide.md` | `settings.json` 수정 시 |
+| `30-knowledge/31-claude-code/hooks-guide.md` | `settings.json` hooks 블록 설계 시 |
+| `30-knowledge/31-claude-code/mcp-guide.md` | MCP 서버 추가·디버깅 시 |
+| `30-knowledge/31-claude-code/rules-guide.md` | `.claude/rules/` 규칙 작성 시 |
+| `30-knowledge/31-claude-code/gws-setup-guide.md` | gws CLI 설정·트러블슈팅 시 |
+
+## 응답 규칙
+
+- 한국어로 응답
+- 간결하고 실용적으로 (불필요한 설명 생략)
+- 존댓말 사용
+
+## 문제해결 규칙
+
+- 근본 원인 우선: 증상만 해결하지 말고 원인을 먼저 파악
+- 왜를 찾아라: 표면적 수정 전에 왜 이 문제가 발생하는지 분석
+- 연쇄 문제 방지: 임시 우회보다 근본적인 수정을 기본
+- 우회시 명시: 불가피하게 임시 해결할 경우, 근본 원인과 향후 조치를 사용자에게 설명
+
+## 작업 규칙
+
+- 파일 수정 시 기존 파일 편집 우선 (새 파일 생성 최소화)
+- 커밋은 요청 시에만
+- 자동 백업: `.scripts/daily-backup.sh`로 매일 자동 커밋 (별도 요청 불필요)
+- Johnny Decimal 네이밍: `[숫자]-[설명적-이름]`
+
+## 현재 진행 중인 프로젝트
+
+(프로젝트가 생기면 여기에 추가)
+
+---
+
+*CLAUDE.md는 Claude가 프로젝트 맥락을 이해하는 핵심 파일입니다.*
+*이 `.template`의 `{{...}}` 자리표시자를 본인 정보로 채운 뒤 `CLAUDE.md`로 저장하세요.*

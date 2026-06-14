@@ -1,0 +1,5 @@
+# 가이드 sync 스냅샷 (WebFetch 원본) — 레포 비대화 방지
+_snapshots/
+
+# 대기중 마커 (로컬 상태, 커밋 불필요)
+_pending-sync.md
