@@ -1,6 +1,6 @@
 ---
 name: research-agent
-description: Use this agent for information gathering, web research, source evaluation, and knowledge synthesis. Searches in both Korean and English, cross-validates across 3+ independent sources, and returns concise fact-based findings. Perfect for market research, competitor analysis, documentation review, and fact-checking. Also works within /decompose pipelines (saves to _parallel/ when file path is specified). Examples - "경쟁사 랜딩페이지 분석해줘", "Carrd vs Framer 비교 자료 수집해줘", "이 주제에 대한 자료 조사해줘"
+description: 정보 수집, 웹 리서치, 출처 검증, 지식 종합에 사용하는 에이전트. 한국어와 영어로 모두 검색하며, 3개 이상의 독립된 출처를 교차 검증해 사실 기반의 간결한 결과를 반환합니다. 시장 조사, 경쟁사 분석, 문서 검토, 팩트체크에 적합합니다. /decompose 파이프라인 내에서도 동작하며(파일 경로가 지정되면 _parallel/에 저장). 예시 - "경쟁사 랜딩페이지 분석해줘", "Carrd vs Framer 비교 자료 수집해줘", "이 주제에 대한 자료 조사해줘"
 model: sonnet
 disallowedTools: EnterWorktree
 skills: truth, pkm-file-search
